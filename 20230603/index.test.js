@@ -3,6 +3,7 @@ const {
   getArraySlice,
   getMinusIndex,
   toUpperOrLow,
+  printTwoWord,
 } = require(".");
 
 test("2023.06.03 1번 문제", () => {
@@ -20,4 +21,8 @@ test("2023.06.03 3번 문제", () => {
 
 test("2023.06.03 4번 문제", () => {
   expect(toUpperOrLow("aBcDeFg")).toEqual("AbCdEfG");
+});
+
+test("2023.06.03 5번 문제", () => {
+  expect(printTwoWord("apple", "pen")).toEqual("applepen");
 });
