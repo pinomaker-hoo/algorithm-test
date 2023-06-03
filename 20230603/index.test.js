@@ -1,4 +1,4 @@
-const { getSumCount, getArraySlice, getMinusIndex } = require("./20230603");
+const { getSumCount, getArraySlice, getMinusIndex } = require(".");
 
 test("2023.06.03 1번 문제", () => {
   expect(getSumCount("123456")).toBe(21);
