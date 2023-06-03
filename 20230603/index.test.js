@@ -4,6 +4,8 @@ const {
   getMinusIndex,
   toUpperOrLow,
   printTwoWord,
+  evenOrOdd,
+  strReplace,
 } = require(".");
 
 test("2023.06.03 1번 문제", () => {
@@ -25,4 +27,14 @@ test("2023.06.03 4번 문제", () => {
 
 test("2023.06.03 5번 문제", () => {
   expect(printTwoWord("apple", "pen")).toEqual("applepen");
+});
+
+test("2023.06.03 6번 문제", () => {
+  expect(evenOrOdd(100)).toEqual("100 is even");
+  expect(evenOrOdd(1)).toEqual("1 is odd");
+});
+
+test("2023.06.03 7번 문제", () => {
+  expect(strReplace("He11oWor1d", "lloWorl", 2)).toEqual("HelloWorld");
+  expect(strReplace("Program29b8UYP", "merS123", 7)).toEqual("ProgrammerS123");
 });

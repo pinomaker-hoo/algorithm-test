@@ -52,10 +52,39 @@ const printTwoWord = (str1, str2) => {
   return (str1 + str2).trim();
 };
 
+/**
+ * 자연수 n이 입력으로 주어졌을 때 만약 n이 짝수이면 "n is even"을, 홀수이면 "n is odd"를 출력하는 코드를 작성해 보세요.
+ */
+const evenOrOdd = (n) => {
+  if (n % 2 === 0) {
+    return n + " is even";
+  }
+
+  return n + " is odd";
+};
+
+/**
+ * 문자열 my_string, overwrite_string과 정수 s가 주어집니다. 문자열 my_string의 인덱스 s부터 overwrite_string의 길이만큼을 문자열 overwrite_string으로 바꾼 문자열을 return 하는 solution 함수를 작성해 주세요.
+ */
+
+const strReplace = (my_string, overwrite_string, s) => {
+  if (overwrite_string.length + s > my_string) {
+    return my_string.slice(0, s) + overwrite_string;
+  }
+
+  return (
+    my_string.slice(0, s) +
+    overwrite_string +
+    my_string.slice(s + overwrite_string.length, my_string.length)
+  );
+};
+
 module.exports = {
   getSumCount,
   getArraySlice,
   getMinusIndex,
   toUpperOrLow,
   printTwoWord,
+  evenOrOdd,
+  strReplace,
 };
