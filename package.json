@@ -18,5 +18,8 @@
   "homepage": "https://github.com/pinomaker-hoo/algorithm-test#readme",
   "dependencies": {
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }

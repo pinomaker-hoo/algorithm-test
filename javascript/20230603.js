@@ -14,7 +14,22 @@ const getArraySlice = (numArr, number) => {
   return numArr.slice(0, number);
 };
 
+/**
+ * mission : 정수 리스트 num_list가 주어질 때, 첫 번째로 나오는 음수의 인덱스를 return하도록 solution 함수를 완성해주세요. 음수가 없다면 -1을 return합니다.
+ */
+const getMinusIndex = (arr) => {
+  let minusIndex = -1;
+  for (const [index, number] of arr.entries()) {
+    if (number < 0) {
+      minusIndex = index;
+      break;
+    }
+  }
+  return minusIndex;
+};
+
 module.exports = {
   getSumCount,
   getArraySlice,
+  getMinusIndex,
 };
