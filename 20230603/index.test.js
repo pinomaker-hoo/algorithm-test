@@ -6,6 +6,7 @@ const {
   printTwoWord,
   evenOrOdd,
   strReplace,
+  getMaxAndMin,
 } = require(".");
 
 test("2023.06.03 1번 문제", () => {
@@ -37,4 +38,9 @@ test("2023.06.03 6번 문제", () => {
 test("2023.06.03 7번 문제", () => {
   expect(strReplace("He11oWor1d", "lloWorl", 2)).toEqual("HelloWorld");
   expect(strReplace("Program29b8UYP", "merS123", 7)).toEqual("ProgrammerS123");
+});
+
+test("2023.06.03 8번 문제", () => {
+  expect(getMaxAndMin("1 2 3 4")).toEqual("1 4");
+  expect(getMaxAndMin("-1 -1")).toEqual("-1 -1");
 });
