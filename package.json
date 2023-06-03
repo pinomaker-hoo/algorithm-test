@@ -1,0 +1,22 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinomaker-hoo/algorithm-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pinomaker-hoo/algorithm-test/issues"
+  },
+  "homepage": "https://github.com/pinomaker-hoo/algorithm-test#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
