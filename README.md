@@ -4,6 +4,13 @@
 
 <br />
 
+## Jest와 함께합니다.
+
+<br /> 
+Algorithm Test를 Jest를 사용해 테스트 코드 작성 실력 향상도 같이 도모한다.
+
+<br />
+
 ## Algorithm Test 시작 이유
 
 <br />
