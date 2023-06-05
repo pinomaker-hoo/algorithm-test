@@ -45,4 +45,21 @@ const getArray = (x, n) => {
   return arr.map((item, index) => item * (index + 1));
 };
 
-module.exports = { reverseArr, getNumber, getBetweenSum, getArray };
+/**
+ * 문자열 s를 숫자로 변환한 결과를 반환하는 함수, solution을 완성하세요.
+ */
+
+const convertStr = (s) => {
+  const arr = s.split("");
+  if (arr[0] === "+") {
+    return Number(arr.slice(1, arr.length).join(""));
+  }
+
+  if (arr[0] === "-") {
+    return Number(arr.slice(1, arr.length).join("")) * -1;
+  }
+
+  return Number(s);
+};
+
+module.exports = { reverseArr, getNumber, getBetweenSum, getArray, convertStr };
