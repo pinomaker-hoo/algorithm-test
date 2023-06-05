@@ -4,6 +4,7 @@ const {
   getBetweenSum,
   getArray,
   convertStr,
+  findNum,
 } = require(".");
 
 test("2023.06.05 1번 문제", () => {
@@ -26,4 +27,8 @@ test("2023.06.05 5번 문제", () => {
   expect(convertStr("1234")).toEqual(1234);
   expect(convertStr("-1234")).toEqual(-1234);
   expect(convertStr("+1234")).toEqual(1234);
+});
+
+test("2023.06.05 6번 문제", () => {
+  expect(findNum(10)).toEqual(3);
 });
