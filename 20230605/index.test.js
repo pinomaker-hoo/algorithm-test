@@ -5,6 +5,8 @@ const {
   getArray,
   convertStr,
   findNum,
+  sortArray,
+  checkNumber,
 } = require(".");
 
 test("2023.06.05 1번 문제", () => {
@@ -31,4 +33,13 @@ test("2023.06.05 5번 문제", () => {
 
 test("2023.06.05 6번 문제", () => {
   expect(findNum(10)).toEqual(3);
+});
+
+test("2023.06.05 7번 문제", () => {
+  expect(sortArray(12345)).toEqual(54321);
+});
+
+test("2023.06.05 8번 문제", () => {
+  expect(checkNumber(10)).toEqual(true);
+  expect(checkNumber(11)).toEqual(false);
 });

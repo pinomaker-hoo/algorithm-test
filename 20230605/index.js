@@ -79,6 +79,33 @@ const findNum = (n) => {
   return num;
 };
 
+/**
+ * 함수 solution은 정수 n을 매개변수로 입력받습니다. n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요.
+ * 예를들어 n이 118372면 873211을 리턴하면 됩니다.
+ */
+const sortArray = (n) => {
+  const array = [...String(n)].map(Number);
+  return Number(array.sort((a, b) => b - a).join(""));
+};
+
+/**
+ * 양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다.
+ * 예를 들어 18의 자릿수 합은 1+8=9이고,
+ * 18은 9로 나누어 떨어지므로 18은 하샤드 수입니다.
+ * 자연수 x를 입력받아 x가 하샤드 수인지 아닌지 검사하는 함수,
+ * solution을 완성해주세요.
+ */
+
+const checkNumber = (x) => {
+  const array = [...String(x)];
+  const count = array.reduce((cur, ocr) => cur + Number(ocr), 0);
+  if (x % count === 0) {
+    return true;
+  }
+
+  return false;
+};
+
 module.exports = {
   reverseArr,
   getNumber,
@@ -86,4 +113,6 @@ module.exports = {
   getArray,
   convertStr,
   findNum,
+  sortArray,
+  checkNumber,
 };
