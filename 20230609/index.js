@@ -15,6 +15,44 @@ const getMoeny = (price, money, count) => {
   return change > 0 ? change : 0;
 };
 
+/**
+ * 1-1. 입력된 수가 짝수라면 2로 나눕니다.
+ * 1-2. 입력된 수가 홀수라면 3을 곱하고 1을 더합니다.
+ * 2. 결과로 나온 수에 같은 작업을 1이 될 때까지 반복합니다.
+ */
+
+const getCollatz = (num) => {
+  let conut = 0;
+  while (num !== 1) {
+    if (conut === 500) {
+      return -1;
+    }
+    if (num % 2 === 0) {
+      num = num / 2;
+    } else {
+      num = num * 3 + 1;
+    }
+
+    conut++;
+  }
+
+  return conut;
+};
+
+/**
+ * 프로그래머스 모바일은 개인정보 보호를 위해 고지서를 보낼 때 고객들의 전화번호의 일부를 가립니다.
+ * 전화번호가 문자열 phone_number로 주어졌을 때,
+ * 전화번호의 뒷 4자리를 제외한 나머지 숫자를 전부 *으로 가린 문자열을 리턴하는 함수, solution을 완성해주세요.
+ */
+
+const getPhone = (phone_number) => {
+  const arr = phone_number.split("");
+  const first = new Array(arr.length - 4).fill("*");
+  return first.join("") + arr.slice(-4).join("");
+};
+
 module.exports = {
   getMoeny,
+  getCollatz,
+  getPhone,
 };
